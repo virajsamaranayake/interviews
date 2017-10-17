@@ -13,8 +13,10 @@ public class Exercise2 {
 		
 		private GasEngine engine = new GasEngine();
 		
-		public Car() {
+		public Car(Engine engine) {
+			this.engine = engine;
 		}
+		
 		
 		public void moveForward() {
 			engine.spinWheels();
@@ -27,3 +29,9 @@ public class Exercise2 {
 		}
 	}
 }
+
+public interface Engine{}
+
+public class GasEngine implements Engine() {}
+
+public class ElectricEngine implements Engine() {}
